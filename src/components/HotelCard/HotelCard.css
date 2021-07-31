@@ -1,0 +1,45 @@
+.hotelCard:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.hotelCard__inner {
+  display: flex;
+  align-items: center;
+}
+.hotelCard__image {
+  width: 45%;
+  background-color: var(--almond);
+  padding-bottom: 30%;
+}
+.hotelCard__meta {
+  width: 55%;
+  text-align: left;
+  padding: 0 0 0 2rem;
+}
+
+/* Type
+***************************************************/
+.hotelCard__location {
+  margin: 0 0 0.5rem 0;
+}
+.hotelCard__name {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+
+.hotelCard__divider {
+  width: 80px;
+}
+
+.hotelCard__times {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 0.675rem;
+  text-transform: uppercase;
+  letter-spacing: 0.105em;
+}
+.hotelCard__times li:not(:last-child)::after {
+  content: "•";
+  margin: 0 5px;
+}
