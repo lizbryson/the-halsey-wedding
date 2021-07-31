@@ -1,0 +1,26 @@
+.introSection {
+  background-color: var(--almond);
+  color: var(--clay);
+  padding: 4rem;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introSection h2 {
+  font-family: "Canela Web";
+  font-weight: 300;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.introSection p {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.105em;
+  color: rgba(77, 58, 46, 1);
+}

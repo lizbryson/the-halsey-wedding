@@ -1,0 +1,71 @@
+:root {
+  --clay: #b87244;
+  --almond: #eee7df;
+  --gold: #f5dc99;
+}
+body {
+  background-color: var(--clay);
+}
+body * {
+  font-family: Brandon Grotesque;
+}
+
+/* Site Header
+***************************************************/
+.siteHeader {
+  text-align: center;
+  padding: 3rem;
+  height: 100vh;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--clay);
+  color: #fff;
+}
+/* Site Logo
+***************************************************/
+.siteLogo {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 0 auto;
+}
+
+/* Site Scroll
+***************************************************/
+.siteScroll__text {
+  display: block;
+  color: var(--gold);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.105em;
+}
+
+/* Site Nav
+***************************************************/
+.siteNav {
+  width: 90%;
+  padding-bottom: 2rem;
+}
+.siteNav__inner {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.siteNav__li {
+  margin: 0;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 37px;
+  letter-spacing: 0.105em;
+}
