@@ -1,10 +1,12 @@
 import * as React from "react";
 import "./IntroSection.css";
+import EmersonIcon from "../../svg/EmersonIcon";
 
 const IntroSection = () => {
   return (
     <section className="introSection">
       <div className="introSection__inner">
+        <EmersonIcon />
         <p>PLEASE JOIN US ON</p>
         <h2>Sunday, October 17th</h2>
         <p>WHEN THE CLOCK STRIKES</p>

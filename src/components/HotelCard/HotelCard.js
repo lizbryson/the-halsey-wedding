@@ -1,21 +1,19 @@
 import * as React from "react";
 import "./HotelCard.css";
 
-const HotelCard = () => {
+const HotelCard = ({ info }) => {
   return (
     <article className="hotelCard">
       <div className="hotelCard__inner">
         <div className="hotelCard__image"></div>
         <div className="hotelCard__meta">
-          <p className="hotelCard__location">Downtown Fort Worth</p>
-          <h4 className="hotelCard__name">The Sinclair</h4>
+          <p className="hotelCard__location">{info.location}</p>
+          <h4 className="hotelCard__name">{info.name}</h4>
           <hr className="hotelCard__divider" />
-          <p classNmae="hotelCard__address">
-            512 Main Street, Fort Worth, TX 76102
-          </p>
+          <p className="hotelCard__address">{info.address}</p>
           <div className="hotelCard__buttons">
-            <a href="">Book Online</a>
-            <a href="">Call To Book</a>
+            <a href={info.url}>Book Online</a>
+            <a href={info.phone}>Call To Book</a>
           </div>
           <ul className="hotelCard__times">
             <li>

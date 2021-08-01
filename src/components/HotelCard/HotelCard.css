@@ -22,8 +22,12 @@
   margin: 0 0 0.5rem 0;
 }
 .hotelCard__name {
+  font-size: 1.675rem;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0.105em;
   text-transform: uppercase;
-  font-size: 1.75rem;
+  color: #4d3a2e;
 }
 
 .hotelCard__divider {
