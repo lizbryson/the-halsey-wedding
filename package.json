@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "author": "swyx <swyx@dontemail.me>",
   "dependencies": {
-    "gatsby": "^2.13.35",
+    "gatsby": "^3.0.0-next.0",
     "gatsby-plugin-image": "^1.10.1",
-    "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-react-helmet": "^4.10.0",
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-sharp": "^3.10.0",
