@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../layout";
 import IntroSection from "../components/IntroSection/IntroSection";
 import HotelsSection from "../components/HotelsSection/HotelsSection";
+import RsvpSection from "../components/RsvpSection/RsvpSection";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -35,6 +36,7 @@ const Index = () => {
       <IntroSection />
       <div id="hotels"></div>
       <HotelsSection />
+      <RsvpSection />
     </Layout>
   );
 };

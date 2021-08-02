@@ -1,0 +1,7 @@
+.rsvpSection {
+  position: relative;
+  z-index: 1;
+  background: var(--clay);
+  text-align: center;
+  padding: 4rem;
+}
