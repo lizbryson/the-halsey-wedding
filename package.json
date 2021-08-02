@@ -25,7 +25,6 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "postinstall": "netlify-lambda install",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"pages/*.js\" \"utils/*.js\" \"wrappers/*.js\" \"html.js\"",
