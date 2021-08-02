@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import Logo from "../../svg/logo";
+import Logo from "../../svg/Logo";
 import "./SiteNav.css";
 import { StaticImage } from "gatsby-plugin-image";
 
