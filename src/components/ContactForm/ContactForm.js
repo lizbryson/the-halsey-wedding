@@ -101,61 +101,59 @@ const ContactForm = () => {
           </label>
         </p>
       </fieldset>
-
-      {attending !== false && (
-        <div className="rsvp-info">
-          <fieldset className="rsvpRadios">
-            <p>
-              <label className="rsvpRadio">
-                <input
-                  className="textInput"
-                  type="radio"
-                  value="YES"
-                  name="shuttle"
-                  onChange={handleChange}
-                />
-                <span className="radioCheck"></span>
-                <span className="radioLabel">
-                  Yes, Save me seat(s) on the Shuttle!
-                </span>
-              </label>
-            </p>
-            <p>
-              <label className="rsvpRadio">
-                <input
-                  className="textInput"
-                  type="radio"
-                  value="NO"
-                  name="shuttle"
-                  onChange={handleChange}
-                />
-                <span className="radioCheck"></span>
-                <span className="radioLabel">
-                  No, I have my own form of transportation
-                </span>
-              </label>
-            </p>
-          </fieldset>
+      <div className={`rsvp-info is-attending--${attending}`}>
+        <fieldset className="rsvpRadios">
           <p>
-            <label className="rsvpName">
-              <span className="textLabel">Your Email:</span>
+            <label className="rsvpRadio">
               <input
                 className="textInput"
-                type="email"
-                name="email"
+                type="radio"
+                value="YES"
+                name="shuttle"
                 onChange={handleChange}
               />
+              <span className="radioCheck"></span>
+              <span className="radioLabel">
+                Yes, Save me seat(s) on the Shuttle!
+              </span>
             </label>
           </p>
           <p>
-            <label>
-              Message:
-              <br />
-              <textarea name="message" onChange={handleChange} />
+            <label className="rsvpRadio">
+              <input
+                className="textInput"
+                type="radio"
+                value="NO"
+                name="shuttle"
+                onChange={handleChange}
+              />
+              <span className="radioCheck"></span>
+              <span className="radioLabel">
+                No, I have my own form of transportation
+              </span>
             </label>
           </p>
-        </div>
-      )}
+        </fieldset>
+        <p>
+          <label className="rsvpName">
+            <span className="textLabel">Your Email:</span>
+            <input
+              className="textInput"
+              type="email"
+              name="email"
+              onChange={handleChange}
+            />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message:
+            <br />
+            <textarea name="message" onChange={handleChange} />
+          </label>
+        </p>
+      </div>
+
       <p>
         <button type="submit">Send</button>
       </p>
