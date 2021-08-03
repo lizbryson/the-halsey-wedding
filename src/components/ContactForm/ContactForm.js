@@ -58,45 +58,7 @@ const ContactForm = () => {
           <input name="bot-field" onChange={handleChange} />
         </label>
       </p>
-      {/* <fieldset className="rsvpRadios">
-        <p>
-          <label className="rsvpRadio">
-            <input
-              type="radio"
-              name="rsvp"
-              id="rsvp_yes"
-              value="yes"
-              onChange={handleChange}
-            />
-            <span className="radioCheck"></span>
-            <span className="radioLabel">Accepts with Pleasure</span>
-          </label>
-        </p>
-        <p>
-          <label className="rsvpRadio">
-            <input
-              type="radio"
-              name="rsvp"
-              id="rsvp_no"
-              value="no"
-              onChange={handleChange}
-            />
-            <span className="radioCheck"></span>
-            <span className="radioLabel">Declines with Regret</span>
-          </label>
-        </p>
-      </fieldset> */}
-      <p>
-        <label className="rsvpName">
-          <input
-            className="textInput"
-            type="text"
-            name="name"
-            onChange={handleChange}
-          />
-          <span className="textLabel">Name(s):</span>
-        </label>
-      </p>
+
       <fieldset className="rsvpRadios">
         <p>
           <label className="rsvpRadio">
@@ -107,12 +69,12 @@ const ContactForm = () => {
               name="rsvp"
               onChange={handleChange}
             />
+            <span className="radioCheck"></span>
             <span className="radioLabel">Accepts with Pleasure</span>
           </label>
         </p>
         <p>
           <label className="rsvpRadio">
-            <span className="radioLabel">Declines with Regret</span>
             <input
               className="textInput"
               type="radio"
@@ -120,15 +82,63 @@ const ContactForm = () => {
               name="rsvp"
               onChange={handleChange}
             />
+            <span className="radioCheck"></span>
+            <span className="radioLabel">Declines with Regret</span>
           </label>
         </p>
       </fieldset>
-
       <p>
-        <label>
-          Your email:
-          <br />
-          <input type="email" name="email" onChange={handleChange} />
+        <label className="rsvpName">
+          <span className="textLabel">Name(s) of Those Attending:</span>
+          <input
+            className="textInput"
+            type="text"
+            name="name"
+            onChange={handleChange}
+          />
+        </label>
+      </p>
+      <fieldset className="rsvpRadios">
+        <p>
+          <label className="rsvpRadio">
+            <input
+              className="textInput"
+              type="radio"
+              value="YES"
+              name="shuttle"
+              onChange={handleChange}
+            />
+            <span className="radioCheck"></span>
+            <span className="radioLabel">
+              Yes, Save me seat(s) on the Shuttle!
+            </span>
+          </label>
+        </p>
+        <p>
+          <label className="rsvpRadio">
+            <input
+              className="textInput"
+              type="radio"
+              value="NO"
+              name="shuttle"
+              onChange={handleChange}
+            />
+            <span className="radioCheck"></span>
+            <span className="radioLabel">
+              No, I have my own form of transportation
+            </span>
+          </label>
+        </p>
+      </fieldset>
+      <p>
+        <label className="rsvpName">
+          <span className="textLabel">Your Email:</span>
+          <input
+            className="textInput"
+            type="email"
+            name="email"
+            onChange={handleChange}
+          />
         </label>
       </p>
       <p>
