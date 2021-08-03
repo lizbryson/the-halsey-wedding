@@ -13,29 +13,34 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
-    console.log(state);
+    console.log(
+      encode({
+        "form-name": "RSVP",
+        ...state,
+      })
+    );
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let myForm = document.getElementById("RSVPForm");
-    let formData = new FormData(myForm);
-    console.log(formData);
-
+    const form = e.target;
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
     })
-      .then(() => console.log("Form successfully submitted"))
+      .then(() => navigate(form.getAttribute("action")))
       .catch((error) => alert(error));
   };
 
   return (
     <form
-      id="RSVPForm"
       name="contact"
       method="post"
+      action="/thanks/"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
@@ -48,31 +53,34 @@ const ContactForm = () => {
           <input name="bot-field" onChange={handleChange} />
         </label>
       </p>
-      <p>
-        <h3>RSVP</h3>
-        <label className="rsvpRadio">
-          <input
-            type="radio"
-            name="rsvp"
-            id="rsvp_yes"
-            value="yes"
-            onChange={handleChange}
-          />
-          <span className="radioCheck"></span>
-          <span className="radioLabel">Accepts with Pleasure</span>
-        </label>
-        <label className="rsvpRadio">
-          <input
-            type="radio"
-            name="rsvp"
-            id="rsvp_no"
-            value="no"
-            onChange={handleChange}
-          />
-          <span className="radioCheck"></span>
-          <span className="radioLabel">Declines with Regret</span>
-        </label>
-      </p>
+      <fieldset className="rsvpRadios">
+        <p>
+          <label className="rsvpRadio">
+            <input
+              type="radio"
+              name="rsvp"
+              id="rsvp_yes"
+              value="yes"
+              onChange={handleChange}
+            />
+            <span className="radioCheck"></span>
+            <span className="radioLabel">Accepts with Pleasure</span>
+          </label>
+        </p>
+        <p>
+          <label className="rsvpRadio">
+            <input
+              type="radio"
+              name="rsvp"
+              id="rsvp_no"
+              value="no"
+              onChange={handleChange}
+            />
+            <span className="radioCheck"></span>
+            <span className="radioLabel">Declines with Regret</span>
+          </label>
+        </p>
+      </fieldset>
       <p>
         <label className="rsvpName">
           <span className="textLabel">Name(s):</span>
