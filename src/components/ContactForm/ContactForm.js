@@ -53,7 +53,7 @@ const ContactForm = () => {
           <input name="bot-field" onChange={handleChange} />
         </label>
       </p>
-      <fieldset className="rsvpRadios">
+      {/* <fieldset className="rsvpRadios">
         <p>
           <label className="rsvpRadio">
             <input
@@ -80,7 +80,7 @@ const ContactForm = () => {
             <span className="radioLabel">Declines with Regret</span>
           </label>
         </p>
-      </fieldset>
+      </fieldset> */}
       <p>
         <label className="rsvpName">
           <span className="textLabel">Name(s):</span>
@@ -88,6 +88,17 @@ const ContactForm = () => {
             className="textInput"
             type="text"
             name="name"
+            onChange={handleChange}
+          />
+        </label>
+      </p>
+      <p>
+        <label className="rsvpName">
+          <span className="textLabel">Test(s):</span>
+          <input
+            className="textInput"
+            type="text"
+            name="testField"
             onChange={handleChange}
           />
         </label>
