@@ -13,17 +13,17 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
-    console.log(
-      encode({
-        "form-name": "RSVP",
-        ...state,
-      })
-    );
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
+    console.log(
+      encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      })
+    );
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -32,13 +32,18 @@ const ContactForm = () => {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => {
+        encode({
+          "form-name": form.getAttribute("name"),
+          ...state,
+        });
+      })
       .catch((error) => alert(error));
   };
 
   return (
     <form
-      name="contact"
+      name="RSVP"
       method="post"
       action="/thanks/"
       data-netlify="true"
