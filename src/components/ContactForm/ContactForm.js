@@ -50,7 +50,7 @@ const ContactForm = () => {
       </p>
       <p>
         <h3>RSVP</h3>
-        <fieldset className="rsvpRadios" onChange={handleChange}>
+        <fieldset className="rsvpRadios" name="rsvp" onChange={handleChange}>
           <label className="rsvpRadio" htmlFor="rsvp_yes">
             <input type="radio" name="rsvp" id="rsvp_yes" value="yes" />
             <span className="radioCheck"></span>
