@@ -88,39 +88,42 @@ const ContactForm = () => {
       </fieldset> */}
       <p>
         <label className="rsvpName">
-          <span className="textLabel">Name(s):</span>
           <input
             className="textInput"
             type="text"
             name="name"
             onChange={handleChange}
           />
+          <span className="textLabel">Name(s):</span>
         </label>
       </p>
-      <p>
-        <label className="rsvpName">
-          <span className="textLabel">Test(s):</span>
-          <input
-            className="textInput"
-            type="radio"
-            value="YES"
-            name="rsvp"
-            onChange={handleChange}
-          />
-        </label>
-      </p>
-      <p>
-        <label className="rsvpName">
-          <span className="textLabel">Test(s):</span>
-          <input
-            className="textInput"
-            type="radio"
-            value="NO"
-            name="rsvp"
-            onChange={handleChange}
-          />
-        </label>
-      </p>
+      <fieldset className="rsvpRadios">
+        <p>
+          <label className="rsvpRadio">
+            <input
+              className="textInput"
+              type="radio"
+              value="YES"
+              name="rsvp"
+              onChange={handleChange}
+            />
+            <span className="radioLabel">Accepts with Pleasure</span>
+          </label>
+        </p>
+        <p>
+          <label className="rsvpRadio">
+            <span className="radioLabel">Declines with Regret</span>
+            <input
+              className="textInput"
+              type="radio"
+              value="NO"
+              name="rsvp"
+              onChange={handleChange}
+            />
+          </label>
+        </p>
+      </fieldset>
+
       <p>
         <label>
           Your email:
