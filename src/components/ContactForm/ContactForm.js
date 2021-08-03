@@ -18,24 +18,24 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target;
+    let myForm = document.getElementById("RSVPForm");
+    let formData = new FormData(myForm);
+    console.log(formData);
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...state,
-      }),
+      body: new URLSearchParams(formData).toString(),
     })
-      .then(() => navigate(form.getAttribute("action")))
+      .then(() => console.log("Form successfully submitted"))
       .catch((error) => alert(error));
   };
 
   return (
     <form
+      id="RSVPForm"
       name="contact"
       method="post"
-      action="/thanks/"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
