@@ -102,7 +102,8 @@ const ContactForm = () => {
           <span className="textLabel">Test(s):</span>
           <input
             className="textInput"
-            type="text"
+            type="radio"
+            value="YES"
             name="testField"
             onChange={handleChange}
           />
