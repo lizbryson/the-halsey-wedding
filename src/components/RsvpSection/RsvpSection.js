@@ -5,6 +5,7 @@ const RsvpSection = () => {
   return (
     <section className="rsvpSection">
       <div className="rsvpSection__inner">
+        <h1>RSVP</h1>
         <ContactForm />
       </div>
     </section>

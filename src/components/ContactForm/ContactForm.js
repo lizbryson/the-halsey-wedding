@@ -10,8 +10,13 @@ function encode(data) {
 
 const ContactForm = () => {
   const [state, setState] = React.useState({});
+  const [attending, setAttending] = React.useState(false);
 
   const handleChange = (e) => {
+    if (e.target.name === "rsvp") {
+      let answerBool = e.target.value === "YES" ? true : false;
+      setAttending(answerBool);
+    }
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
@@ -50,7 +55,6 @@ const ContactForm = () => {
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
     >
-      {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
       <input type="hidden" name="form-name" value="RSVP" />
       <p hidden>
         <label>
@@ -58,7 +62,17 @@ const ContactForm = () => {
           <input name="bot-field" onChange={handleChange} />
         </label>
       </p>
-
+      <p>
+        <label className="rsvpName">
+          <span className="textLabel">Name(s):</span>
+          <input
+            className="textInput"
+            type="text"
+            name="name"
+            onChange={handleChange}
+          />
+        </label>
+      </p>
       <fieldset className="rsvpRadios">
         <p>
           <label className="rsvpRadio">
@@ -87,67 +101,61 @@ const ContactForm = () => {
           </label>
         </p>
       </fieldset>
-      <p>
-        <label className="rsvpName">
-          <span className="textLabel">Name(s) of Those Attending:</span>
-          <input
-            className="textInput"
-            type="text"
-            name="name"
-            onChange={handleChange}
-          />
-        </label>
-      </p>
-      <fieldset className="rsvpRadios">
-        <p>
-          <label className="rsvpRadio">
-            <input
-              className="textInput"
-              type="radio"
-              value="YES"
-              name="shuttle"
-              onChange={handleChange}
-            />
-            <span className="radioCheck"></span>
-            <span className="radioLabel">
-              Yes, Save me seat(s) on the Shuttle!
-            </span>
-          </label>
-        </p>
-        <p>
-          <label className="rsvpRadio">
-            <input
-              className="textInput"
-              type="radio"
-              value="NO"
-              name="shuttle"
-              onChange={handleChange}
-            />
-            <span className="radioCheck"></span>
-            <span className="radioLabel">
-              No, I have my own form of transportation
-            </span>
-          </label>
-        </p>
-      </fieldset>
-      <p>
-        <label className="rsvpName">
-          <span className="textLabel">Your Email:</span>
-          <input
-            className="textInput"
-            type="email"
-            name="email"
-            onChange={handleChange}
-          />
-        </label>
-      </p>
-      <p>
-        <label>
-          Message:
-          <br />
-          <textarea name="message" onChange={handleChange} />
-        </label>
-      </p>
+
+      {attending !== false && (
+        <div className="rsvp-info">
+          <fieldset className="rsvpRadios">
+            <p>
+              <label className="rsvpRadio">
+                <input
+                  className="textInput"
+                  type="radio"
+                  value="YES"
+                  name="shuttle"
+                  onChange={handleChange}
+                />
+                <span className="radioCheck"></span>
+                <span className="radioLabel">
+                  Yes, Save me seat(s) on the Shuttle!
+                </span>
+              </label>
+            </p>
+            <p>
+              <label className="rsvpRadio">
+                <input
+                  className="textInput"
+                  type="radio"
+                  value="NO"
+                  name="shuttle"
+                  onChange={handleChange}
+                />
+                <span className="radioCheck"></span>
+                <span className="radioLabel">
+                  No, I have my own form of transportation
+                </span>
+              </label>
+            </p>
+          </fieldset>
+          <p>
+            <label className="rsvpName">
+              <span className="textLabel">Your Email:</span>
+              <input
+                className="textInput"
+                type="email"
+                name="email"
+                onChange={handleChange}
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message:
+              <br />
+              <textarea name="message" onChange={handleChange} />
+            </label>
+          </p>
+        </div>
+      )}
       <p>
         <button type="submit">Send</button>
       </p>
