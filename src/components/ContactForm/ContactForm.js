@@ -50,18 +50,28 @@ const ContactForm = () => {
       </p>
       <p>
         <h3>RSVP</h3>
-        <fieldset className="rsvpRadios" onChange={handleChange}>
-          <label className="rsvpRadio">
-            <input type="radio" name="rsvp" id="rsvp_yes" value="yes" />
-            <span className="radioCheck"></span>
-            <span className="radioLabel">Accepts with Pleasure</span>
-          </label>
-          <label className="rsvpRadio">
-            <input type="radio" name="rsvp" id="rsvp_no" value="no" />
-            <span className="radioCheck"></span>
-            <span className="radioLabel">Declines with Regret</span>
-          </label>
-        </fieldset>
+        <label className="rsvpRadio">
+          <input
+            type="radio"
+            name="rsvp"
+            id="rsvp_yes"
+            value="yes"
+            onChange={handleChange}
+          />
+          <span className="radioCheck"></span>
+          <span className="radioLabel">Accepts with Pleasure</span>
+        </label>
+        <label className="rsvpRadio">
+          <input
+            type="radio"
+            name="rsvp"
+            id="rsvp_no"
+            value="no"
+            onChange={handleChange}
+          />
+          <span className="radioCheck"></span>
+          <span className="radioLabel">Declines with Regret</span>
+        </label>
       </p>
       <p>
         <label className="rsvpName">
