@@ -1,21 +1,17 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import SiteNav from './components/SiteNav/SiteNav';
+import React from "react";
+import { Helmet } from "react-helmet";
 
-import './css/typography.css'
-import './css/styles.css'
+import "./css/typography.css";
+import "./css/styles.css";
 
 export default function Template({ children }) {
   return (
     <main>
       <Helmet
         title="The Halsey Wedding | Sunday, October 17, 2021"
-        meta={[{ name: 'description', content: 'Sample' }]}
+        meta={[{ name: "description", content: "Sample" }]}
       />
-      <SiteNav />
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </main>
-  )
+  );
 }

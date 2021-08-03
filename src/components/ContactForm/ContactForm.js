@@ -102,6 +102,7 @@ const ContactForm = () => {
         </p>
       </fieldset>
       <div className={`rsvp-info is-attending--${attending}`}>
+        <h3>Great! Will You Be Taking the Shuttle?</h3>
         <fieldset className="rsvpRadios">
           <p>
             <label className="rsvpRadio">
@@ -136,6 +137,23 @@ const ContactForm = () => {
         </fieldset>
         <p>
           <label className="rsvpName">
+            <span className="textLabel">
+              How many seats would you like to reserve?
+            </span>
+            <input
+              className="numberInput"
+              type="number"
+              defaultValue="2"
+              step="1"
+              min="1"
+              max="6"
+              name="seatsNeeded"
+              onChange={handleChange}
+            />
+          </label>
+        </p>
+        <p>
+          <label className="rsvpName">
             <span className="textLabel">Your Email:</span>
             <input
               className="textInput"
@@ -146,10 +164,14 @@ const ContactForm = () => {
           </label>
         </p>
         <p>
-          <label>
-            Message:
-            <br />
-            <textarea name="message" onChange={handleChange} />
+          <label className="rsvpName">
+            <span className="textLabel">Your Phone Number:</span>
+            <input
+              className="textInput"
+              type="phone"
+              name="phone"
+              onChange={handleChange}
+            />
           </label>
         </p>
       </div>

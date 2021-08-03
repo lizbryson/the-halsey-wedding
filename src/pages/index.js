@@ -4,6 +4,8 @@ import IntroSection from "../components/IntroSection/IntroSection";
 import HotelsSection from "../components/HotelsSection/HotelsSection";
 import RsvpSection from "../components/RsvpSection/RsvpSection";
 import TransportationSection from "../components/TransportationSection/TransportationSection";
+import SiteNav from "../components/SiteNav/SiteNav";
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -31,15 +33,18 @@ const Index = () => {
     });
   }, []);
   return (
-    <Layout>
-      <div className="section-offset"></div>
-      <div id="intro"></div>
-      <IntroSection />
-      <div id="hotels"></div>
-      <HotelsSection />
-      <TransportationSection />
-      <RsvpSection />
-    </Layout>
+    <>
+      <SiteNav />
+      <Layout>
+        <div className="section-offset"></div>
+        <div id="intro"></div>
+        <IntroSection />
+        <div id="hotels"></div>
+        <HotelsSection />
+        <TransportationSection />
+        <RsvpSection />
+      </Layout>
+    </>
   );
 };
 
