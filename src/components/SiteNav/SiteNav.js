@@ -16,7 +16,7 @@ const SiteNav = () => {
             <Link to="/rsvp">RSVP</Link>
           </li>
           <li className="siteNav__li">
-            <a href="#hotels">Hotel</a>
+            <a href="#hotels">Hotels</a>
           </li>
           <li className="siteNav__li">
             <a href="#transport">Transport</a>

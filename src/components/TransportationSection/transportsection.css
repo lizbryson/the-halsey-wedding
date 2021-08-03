@@ -1,0 +1,14 @@
+.transportSection {
+  position: relative;
+  z-index: 1;
+  background-color: var(--clay);
+  text-align: center;
+  color: #fff;
+}
+
+.transportSection__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 0 3rem 0;
+}

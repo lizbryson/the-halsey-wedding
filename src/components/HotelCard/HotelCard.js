@@ -1,11 +1,15 @@
 import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 import "./HotelCard.css";
 
 const HotelCard = ({ info }) => {
   return (
     <article className="hotelCard">
       <div className="hotelCard__inner">
-        <div className="hotelCard__image"></div>
+        <div className="hotelCard__image">
+          <img src={info.image.src} alt="A dinosaur" />
+        </div>
         <div className="hotelCard__meta">
           <p className="hotelCard__location">{info.location}</p>
           <h4 className="hotelCard__name">{info.name}</h4>

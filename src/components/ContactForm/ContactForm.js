@@ -1,5 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby-link";
+import "./ContactForm.css";
 
 function encode(data) {
   return Object.keys(data)
@@ -12,6 +13,7 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
+    console.log(state);
   };
 
   const handleSubmit = (e) => {
@@ -47,10 +49,29 @@ const ContactForm = () => {
         </label>
       </p>
       <p>
-        <label>
-          Your name:
-          <br />
-          <input type="text" name="name" onChange={handleChange} />
+        <h3>RSVP</h3>
+        <fieldset className="rsvpRadios" onChange={handleChange}>
+          <label className="rsvpRadio" htmlFor="rsvp_yes">
+            <input type="radio" name="rsvp" id="rsvp_yes" value="yes" />
+            <span className="radioCheck"></span>
+            <span className="radioLabel">Accepts with Pleasure</span>
+          </label>
+          <label className="rsvpRadio" htmlFor="rsvp_no">
+            <input type="radio" name="rsvp" id="rsvp_no" value="no" />
+            <span className="radioCheck"></span>
+            <span className="radioLabel">Declines with Regret</span>
+          </label>
+        </fieldset>
+      </p>
+      <p>
+        <label className="rsvpName">
+          <span className="textLabel">Name(s):</span>
+          <input
+            className="textInput"
+            type="text"
+            name="name"
+            onChange={handleChange}
+          />
         </label>
       </p>
       <p>
