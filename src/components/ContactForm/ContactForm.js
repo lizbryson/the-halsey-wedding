@@ -11,11 +11,15 @@ function encode(data) {
 const ContactForm = () => {
   const [state, setState] = React.useState({});
   const [attending, setAttending] = React.useState(false);
+  const [seats, setSeats] = React.useState(2);
 
   const handleChange = (e) => {
     if (e.target.name === "rsvp") {
       let answerBool = e.target.value === "YES" ? true : false;
       setAttending(answerBool);
+    }
+    if (e.target.name === "seatsNeeded") {
+      setSeats(e.target.value);
     }
     setState({ ...state, [e.target.name]: e.target.value });
   };
@@ -143,7 +147,7 @@ const ContactForm = () => {
             <input
               className="numberInput"
               type="number"
-              defaultValue="2"
+              value={seats}
               step="1"
               min="1"
               max="6"
