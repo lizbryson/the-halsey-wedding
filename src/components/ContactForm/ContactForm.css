@@ -11,9 +11,6 @@
 .rsvpRadios > p {
   width: auto;
   max-width: 300px;
-  /* border: 1px solid red; */
-  /* padding-left: 1rem; */
-  /* margin: 0 auto 1rem auto; */
 }
 
 .rsvpRadio {
@@ -68,6 +65,8 @@
   color: #fff;
   display: flex;
   padding: 0 2rem;
+  max-width: 750px;
+  margin: 0 auto;
   align-items: center;
 }
 .textLabel {
@@ -113,10 +112,8 @@ form > p:last-child {
 .rsvp-info {
   border-top: 2px solid #fff;
   padding-top: 2rem;
-  padding: 2rem 4rem 0 2rem;
-  margin-top: 3rem;
-  /* background-color: rgba(255, 255, 255, 0.1); */
-  /* padding: 4rem; */
+  padding: 2.75rem 2rem 0 2rem;
+  margin-top: 3.5rem;
 }
 
 .numberInput {
@@ -128,6 +125,12 @@ form > p:last-child {
   font-weight: 300;
   padding: 1rem;
   color: #fff;
+}
+
+.rsvp-info h3 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 3rem;
 }
 
 /* Section Layout

@@ -76,6 +76,7 @@ const ContactForm = () => {
               value="YES"
               name="rsvp"
               onChange={handleChange}
+              required
             />
             <span className="radioCheck"></span>
             <span className="radioLabel">Accepts with Pleasure</span>
@@ -89,6 +90,7 @@ const ContactForm = () => {
               value="NO"
               name="rsvp"
               onChange={handleChange}
+              required
             />
             <span className="radioCheck"></span>
             <span className="radioLabel">Declines with Regret</span>
