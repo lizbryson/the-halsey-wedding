@@ -5,7 +5,7 @@
 .introSection {
   background-color: var(--almond);
   color: var(--clay);
-  padding: 4rem;
+  padding: 2rem;
   min-height: 100vh;
   text-align: center;
   display: flex;
@@ -18,20 +18,14 @@
 .introSection h2 {
   font-family: "Canela Web";
   font-weight: 300;
-  font-size: 2rem;
-  line-height: 1.5;
-}
-
-@media screen and (min-width: 992px) {
-  .introSection h2 {
-    font-size: 3.5rem;
-  }
+  font-size: 2.5rem;
+  line-height: 1.25;
 }
 
 .introSection p {
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
   letter-spacing: 0.105em;
   color: rgba(77, 58, 46, 1);
@@ -42,4 +36,18 @@
   height: auto;
   max-width: 300px;
   margin: 0 0 3rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .introSection {
+    padding: 4rem;
+  }
+  .introSection h2 {
+    font-size: 3.5rem;
+    line-height: 1.5;
+  }
+  .introSection p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
