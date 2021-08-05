@@ -8,8 +8,7 @@ const hotelData = {
       name: "The Sinclair",
       location: "Downtown Fort Worth",
       address: "512 Main Street, Fort Worth, TX 76102",
-      url: "https://www.marriott.com/event-reservations/reservation-link.mi?id=1620760435774&key=GRP&app=resvlink
-",
+      url: "https://www.marriott.com/event-reservations/reservation-link.mi?id=1620760435774&key=GRP&app=resvlink",
       map: "https://goo.gl/maps/gSqKJe9R7C37cEYD6",
       phone: "tel:682-231-8214",
       image: {
@@ -27,7 +26,7 @@ const hotelData = {
       image: {
         src: "./images/towneplace.jpg",
       },
-      commute: [10, 60, 30,
+      commute: [10, 60, 30],
     },
     {
       name: "Fairfield Inn & Suites",

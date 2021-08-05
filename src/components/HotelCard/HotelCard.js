@@ -21,13 +21,13 @@ const HotelCard = ({ info }) => {
           </div>
           <ul className="hotelCard__times">
             <li>
-              <strong>15M</strong> to Rehearsal Dinner
+              <strong>{info.commute[0]}M</strong> to Rehearsal Dinner
             </li>
             <li>
-              <strong>65M</strong> to Wedding
+              <strong>{info.commute[1]}M</strong> to Wedding
             </li>
             <li>
-              <strong>45M</strong> to DFW Airport
+              <strong>{info.commute[2]}M</strong> to DFW Airport
             </li>
           </ul>
         </div>
