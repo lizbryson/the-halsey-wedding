@@ -18,8 +18,14 @@
 .introSection h2 {
   font-family: "Canela Web";
   font-weight: 300;
-  font-size: 3.5rem;
+  font-size: 2rem;
   line-height: 1.5;
+}
+
+@media screen and (min-width: 992px) {
+  .introSection h2 {
+    font-size: 3.5rem;
+  }
 }
 
 .introSection p {
