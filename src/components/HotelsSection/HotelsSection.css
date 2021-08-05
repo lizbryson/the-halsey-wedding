@@ -32,7 +32,13 @@
 }
 .hotelSection__body {
   background-color: #fff;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (min-width: 992px) {
+  .hotelSection__body {
+    padding: 2rem;
+  }
 }

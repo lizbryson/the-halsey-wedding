@@ -103,6 +103,7 @@ const ContactForm = () => {
             type="text"
             name="name"
             onChange={handleChange}
+            required
           />
         </label>
       </p>
