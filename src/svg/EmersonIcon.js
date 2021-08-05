@@ -3,6 +3,7 @@ import * as React from "react";
 const EmersonIcon = () => {
   return (
     <svg
+      className="EmersonIcon"
       width="262"
       height="86"
       viewBox="0 0 262 86"

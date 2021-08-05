@@ -31,11 +31,31 @@
   color: rgba(77, 58, 46, 1);
 }
 
-.introSection svg {
+.introSection .EmersonIcon {
   width: 100%;
   height: auto;
   max-width: 300px;
   margin: 0 0 3rem 0;
+}
+.introSection a {
+  display: inline-block;
+  position: relative;
+}
+.introSection a:hover {
+  color: var(--clay);
+}
+.introSection a:hover .linkIcon {
+  opacity: 1;
+}
+
+.introSection .linkIcon {
+  width: 15px;
+  display: inline-block;
+  margin-left: 0.5rem;
+  opacity: 0.25;
+  position: absolute;
+  top: 2px;
+  right: -25px;
 }
 
 @media screen and (min-width: 768px) {
