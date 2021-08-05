@@ -12,7 +12,7 @@ const ContactForm = () => {
   const [state, setState] = React.useState({});
   const [attending, setAttending] = React.useState(false);
   const [shuttle, setShuttle] = React.useState(false);
-  const [seats, setSeats] = React.useState(2);
+  const [seats, setSeats] = React.useState(1);
 
   const handleChange = (e) => {
     if (e.target.name === "rsvp") {
@@ -29,6 +29,14 @@ const ContactForm = () => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
+  const handleSeats = (e) => {
+    const buttonAction = e.target.dataset.action;
+    if (buttonAction === "increase" && seats < 6) {
+      setSeats((prev) => (prev += 1));
+    } else if (buttonAction === "decrease" && seats > 1) {
+      setSeats((prev) => (prev -= 1));
+    }
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -117,6 +125,7 @@ const ContactForm = () => {
                   value="YES"
                   name="shuttle"
                   onChange={handleChange}
+                  required={attending}
                 />
                 <span className="radioCheck"></span>
                 <span className="radioLabel">
@@ -132,6 +141,7 @@ const ContactForm = () => {
                   value="NO"
                   name="shuttle"
                   onChange={handleChange}
+                  required={attending}
                 />
                 <span className="radioCheck"></span>
                 <span className="radioLabel">
@@ -147,16 +157,33 @@ const ContactForm = () => {
                 <input
                   className="numberInput"
                   type="number"
-                  value={seats || 2}
+                  value={seats || 1}
                   step="1"
                   min="1"
                   max="6"
                   name="seatsNeeded"
                   onChange={handleChange}
+                  required={shuttle}
                 />
               </label>
+              <span className="seatControls">
+                <span
+                  className="seatControl"
+                  data-action="decrease"
+                  onClick={handleSeats}
+                >
+                  -
+                </span>
+                <span
+                  className="seatControl"
+                  data-action="increase"
+                  onClick={handleSeats}
+                >
+                  +
+                </span>
+              </span>
             </p>
-            <div>
+            <div className="test">
               <p>
                 <label className="rsvpName">
                   <span className="textLabel">Your Email:</span>
@@ -165,6 +192,7 @@ const ContactForm = () => {
                     type="email"
                     name="email"
                     onChange={handleChange}
+                    required={shuttle}
                   />
                 </label>
               </p>
@@ -176,6 +204,7 @@ const ContactForm = () => {
                     type="phone"
                     name="phone"
                     onChange={handleChange}
+                    required={shuttle}
                   />
                 </label>
               </p>
