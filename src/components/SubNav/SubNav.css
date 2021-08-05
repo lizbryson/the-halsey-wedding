@@ -1,0 +1,28 @@
+.siteSubNav__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 2rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.siteSubNav__inner .siteLogo {
+  width: 120px;
+}
+
+.siteSubNav__inner .siteLogo svg {
+  width: 100%;
+}
+
+.siteSubNav__li {
+  width: 20%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.75rem;
+  letter-spacing: 0.108rem;
+  font-weight: 500;
+  margin: 0;
+}
