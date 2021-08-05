@@ -9,7 +9,7 @@ body {
   background-color: var(--clay);
 }
 body * {
-  font-family: Brandon Grotesque;
+  font-family: "brandon-grotesque", Brandon Grotesque, sans-serif;
 }
 
 /* Site Header
