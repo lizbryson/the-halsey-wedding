@@ -11,14 +11,17 @@ const HotelCard = ({ info }) => {
           <img src={info.image.src} alt="" />
         </div>
         <div className="hotelCard__meta">
-          <p className="hotelCard__location">{info.location}</p>
-          <h4 className="hotelCard__name">{info.name}</h4>
-          <hr className="hotelCard__divider" />
-          <p className="hotelCard__address">{info.address}</p>
-          <div className="hotelCard__buttons">
-            <a href={info.url}>Book Online</a>
-            <a href={info.phone}>Call To Book</a>
+          <div className="hotelCard__top">
+            <p className="hotelCard__location">{info.location}</p>
+            <h4 className="hotelCard__name">{info.name}</h4>
+            <hr className="hotelCard__divider" />
+            <p className="hotelCard__address">{info.address}</p>
+            <div className="hotelCard__buttons">
+              <a href={info.url}>Book Online</a>
+              <a href={info.phone}>Call To Book</a>
+            </div>
           </div>
+
           <ul className="hotelCard__times">
             <li>
               <strong>{info.commute[0]}M</strong> to Rehearsal Dinner
