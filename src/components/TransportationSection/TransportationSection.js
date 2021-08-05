@@ -8,10 +8,10 @@ const TransportationSection = () => {
         <h3>Transportation</h3>
         <p>
           A complimentary round trip shuttle will be available to our guests,
-          departing from both Fort Worth hotels. shuttle will be arranged to
-          transport guests from Fort Worth to The Emerson. If you would like to
-          reserve your spot on the shuttle, click the link below. More
-          information will be available soon!
+          departing from both Fort Worth hotels. If you would like to reserve
+          your spot on the shuttle, please indicate the number of seats you
+          would like to reserve on your RSVP below. More information will be
+          available soon!
         </p>
         <p>
           Should you choose not to take the shuttle, we highly recommend having
