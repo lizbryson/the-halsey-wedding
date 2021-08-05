@@ -66,17 +66,7 @@ const ContactForm = () => {
           <input name="bot-field" onChange={handleChange} />
         </label>
       </p>
-      <p>
-        <label className="rsvpName">
-          <span className="textLabel">Name(s):</span>
-          <input
-            className="textInput"
-            type="text"
-            name="name"
-            onChange={handleChange}
-          />
-        </label>
-      </p>
+
       <fieldset className="rsvpRadios">
         <p>
           <label className="rsvpRadio">
@@ -105,6 +95,17 @@ const ContactForm = () => {
           </label>
         </p>
       </fieldset>
+      <p>
+        <label className="rsvpName">
+          <span className="textLabel">Name(s):</span>
+          <input
+            className="textInput"
+            type="text"
+            name="name"
+            onChange={handleChange}
+          />
+        </label>
+      </p>
       <div className={`rsvp-info is-attending--${attending}`}>
         <h3>Great! Will You Be Taking the Shuttle?</h3>
         <fieldset className="rsvpRadios">
@@ -181,7 +182,9 @@ const ContactForm = () => {
       </div>
 
       <p>
-        <button type="submit">Send</button>
+        <button className="submitButton" type="submit">
+          Send
+        </button>
       </p>
     </form>
   );

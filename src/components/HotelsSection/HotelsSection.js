@@ -47,7 +47,7 @@ const HotelsSection = () => {
     <section className="hotelsSection">
       <div className="hotelsSection__inner">
         <div className="hotelSection__header">
-          <h2 className="hotelsSection__headline">Hotels</h2>
+          <h3 className="hotelsSection__headline">Hotels</h3>
         </div>
         <div className="hotelSection__body">
           {hotelData.hotels.map((hotel, index) => (

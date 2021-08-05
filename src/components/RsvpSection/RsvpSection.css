@@ -3,5 +3,34 @@
   z-index: 1;
   background: var(--clay);
   text-align: center;
-  padding: 4rem;
+  padding: 4rem 2rem;
+}
+
+.rsvpSection h2 {
+  font-family: "Canela Web";
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: #fff;
+  letter-spacing: 10px;
+  display: inline-block;
+  background-color: var(--clay);
+  position: relative;
+  z-index: 5;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 0 1rem 0 1.675rem;
+}
+
+@media screen and (min-width: 992px) {
+  .rsvpSection h2 {
+    font-size: 4rem;
+  }
+}
+
+.rsvpSection__inner {
+  border: 2px solid #fff;
+  /* padding: 0 3rem; */
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
 }
