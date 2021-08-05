@@ -154,7 +154,7 @@ form > p:last-child {
 }
 
 .numberInput {
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
   background-color: transparent;
   border: none;
@@ -206,4 +206,48 @@ form.is-submitted + .form-thankyou {
 
 .rsvpName.is-number {
   flex-direction: column;
+}
+
+/* Shuttle Info
+***************************************************/
+
+.shuttle-info.is-riding--false {
+  display: none;
+}
+.shuttle-info.is-riding--true {
+  display: block;
+}
+.shuttle-info {
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  padding-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .shuttle-info.is-riding--true {
+    display: flex;
+    align-items: center;
+  }
+  .shuttle-info > p {
+    width: 40%;
+    max-width: 280px;
+    margin-bottom: 0;
+  }
+  .shuttle-info > div {
+    width: 60%;
+    flex-grow: 1;
+  }
+}
+
+.shuttle-info .rsvpName {
+  flex-direction: column;
+  padding-right: 0;
+  padding: 0;
+}
+
+.shuttle-info .textLabel {
+  margin-bottom: 0.5rem;
+  margin-right: 0;
+}
+.shuttle-info > div .textLabel {
+  font-size: 0.75rem;
 }

@@ -11,12 +11,17 @@ function encode(data) {
 const ContactForm = () => {
   const [state, setState] = React.useState({});
   const [attending, setAttending] = React.useState(false);
+  const [shuttle, setShuttle] = React.useState(false);
   const [seats, setSeats] = React.useState(2);
 
   const handleChange = (e) => {
     if (e.target.name === "rsvp") {
       let answerBool = e.target.value === "YES" ? true : false;
       setAttending(answerBool);
+    }
+    if (e.target.name === "shuttle") {
+      let answerBool = e.target.value === "YES" ? true : false;
+      setShuttle(answerBool);
     }
     if (e.target.name === "seatsNeeded") {
       setSeats(e.target.value);
@@ -135,47 +140,48 @@ const ContactForm = () => {
               </label>
             </p>
           </fieldset>
-          <p>
-            <label className="rsvpName is-number">
-              <span className="textLabel">
-                How many seats would you like to reserve?
-              </span>
-              <input
-                className="numberInput"
-                type="number"
-                value={seats || 2}
-                step="1"
-                min="1"
-                max="6"
-                name="seatsNeeded"
-                onChange={handleChange}
-              />
-            </label>
-          </p>
-          <p>
-            <label className="rsvpName">
-              <span className="textLabel">Your Email:</span>
-              <input
-                className="textInput"
-                type="email"
-                name="email"
-                onChange={handleChange}
-              />
-            </label>
-          </p>
-          <p>
-            <label className="rsvpName">
-              <span className="textLabel">Your Phone Number:</span>
-              <input
-                className="textInput"
-                type="phone"
-                name="phone"
-                onChange={handleChange}
-              />
-            </label>
-          </p>
+          <div className={`shuttle-info is-riding--${shuttle}`}>
+            <p>
+              <label className="rsvpName is-number">
+                <span className="textLabel">Number of Seats:</span>
+                <input
+                  className="numberInput"
+                  type="number"
+                  value={seats || 2}
+                  step="1"
+                  min="1"
+                  max="6"
+                  name="seatsNeeded"
+                  onChange={handleChange}
+                />
+              </label>
+            </p>
+            <div>
+              <p>
+                <label className="rsvpName">
+                  <span className="textLabel">Your Email:</span>
+                  <input
+                    className="textInput"
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                  />
+                </label>
+              </p>
+              <p>
+                <label className="rsvpName">
+                  <span className="textLabel">Your Phone Number:</span>
+                  <input
+                    className="textInput"
+                    type="phone"
+                    name="phone"
+                    onChange={handleChange}
+                  />
+                </label>
+              </p>
+            </div>
+          </div>
         </div>
-
         <p>
           <button className="submitButton" type="submit">
             Send
