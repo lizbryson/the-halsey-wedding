@@ -2,8 +2,7 @@
   border: none;
   color: #fff;
   text-transform: uppercase;
-  display: flex;
-  justify-content: space-between;
+
   max-width: 750px;
   margin: 1.5rem auto;
   padding: 0 2rem;
@@ -11,12 +10,19 @@
 .rsvpRadios > p {
   width: auto;
   max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .rsvpRadios {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .rsvpRadio {
   text-align: center;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   cursor: pointer;
   margin: 0 auto;
