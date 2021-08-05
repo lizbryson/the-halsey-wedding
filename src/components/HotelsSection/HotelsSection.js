@@ -15,7 +15,7 @@ const hotelData = {
       image: {
         src: "./images/sinclair.jpg",
       },
-      commute: [15, 45, 65],
+      commute: [15, 65, 35],
     },
     {
       name: "Towneplace Suites",
@@ -27,7 +27,7 @@ const hotelData = {
       image: {
         src: "./images/towneplace.jpg",
       },
-      commute: [15, 45, 65],
+      commute: [10, 60, 30,
     },
     {
       name: "Fairfield Inn & Suites",
@@ -39,7 +39,7 @@ const hotelData = {
       image: {
         src: "./images/terrell.jpg",
       },
-      commute: [15, 45, 65],
+      commute: [70, 15, 55],
     },
   ],
 };
