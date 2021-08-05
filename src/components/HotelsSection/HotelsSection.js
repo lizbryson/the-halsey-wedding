@@ -12,7 +12,7 @@ const hotelData = {
       map: "https://goo.gl/maps/gSqKJe9R7C37cEYD6",
       phone: "682-231-8214",
       image: {
-        src: "./images/sinclair.jpg",
+        src: "./sinclair.jpg",
       },
       commute: [15, 45, 65],
     },
@@ -24,7 +24,7 @@ const hotelData = {
       map: "https://goo.gl/maps/JoujyKNQjw4ehvNC8",
       phone: "817-632-0800",
       image: {
-        src: "./images/towneplace.jpg",
+        src: "./towneplace.jpg",
       },
       commute: [15, 45, 65],
     },
@@ -36,7 +36,7 @@ const hotelData = {
       map: "https://goo.gl/maps/A1zdDUWwTnNqDVi98",
       phone: "+972-551-3200",
       image: {
-        src: "./images/terrell.jpg",
+        src: "./terrell.jpg",
       },
       commute: [15, 45, 65],
     },
