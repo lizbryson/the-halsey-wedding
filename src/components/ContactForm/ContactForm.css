@@ -4,7 +4,6 @@
   text-transform: uppercase;
   max-width: 750px;
   margin: 1.5rem auto;
-  padding-left: 2rem;
 }
 .rsvpRadios > p {
   margin-left: auto;
@@ -94,6 +93,7 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  border-radius: 0;
   background-color: rgba(0, 0, 0, 0.1);
   font-size: 1.5rem;
   border: none;
@@ -130,16 +130,39 @@ form > p:last-child {
   padding: 2rem;
   margin-top: 2.5rem;
 }
+.rsvp-info .rsvpRadios {
+  padding-right: 0;
+}
+.rsvp-info .rsvpRadios > p {
+  width: 100% !important;
+  max-width: 290px;
+}
+
+@media screen and (min-width: 992px) {
+  .rsvp-info .rsvpRadios > p {
+    width: 50% !important;
+  }
+}
+
+.rsvp-info .rsvpRadio {
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.rsvp-info .radioLabel {
+  text-align: center;
+  margin-top: 1rem;
+}
 
 .numberInput {
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: transparent;
   border: none;
   font-family: "Canela Web";
   font-weight: 300;
-  padding: 1rem;
+  /* padding: 1rem; */
   color: #fff;
+  -webkit-appearance: none;
 }
 
 .rsvp-info h3 {
@@ -173,6 +196,14 @@ form.is-submitted,
 .form-thankyou {
   display: none;
 }
+.form-thankyou {
+  color: #fff;
+  padding: 2rem 0;
+}
 form.is-submitted + .form-thankyou {
   display: block;
+}
+
+.rsvpName.is-number {
+  flex-direction: column;
 }

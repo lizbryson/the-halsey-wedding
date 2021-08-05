@@ -136,14 +136,14 @@ const ContactForm = () => {
             </p>
           </fieldset>
           <p>
-            <label className="rsvpName">
+            <label className="rsvpName is-number">
               <span className="textLabel">
                 How many seats would you like to reserve?
               </span>
               <input
                 className="numberInput"
                 type="number"
-                value={seats}
+                value={seats || 2}
                 step="1"
                 min="1"
                 max="6"
