@@ -8,7 +8,7 @@ const HotelCard = ({ info }) => {
     <article className="hotelCard">
       <div className="hotelCard__inner">
         <div className="hotelCard__image">
-          <img src={info.image.src} alt="A dinosaur" />
+          <img src={info.image.src} alt="" />
         </div>
         <div className="hotelCard__meta">
           <p className="hotelCard__location">{info.location}</p>

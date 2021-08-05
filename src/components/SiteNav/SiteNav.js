@@ -37,13 +37,22 @@ const SiteNav = () => {
         <div className="siteScroll__icon"></div>
       </div>
       <div id="photoOne" className="photo-float is-bottom-left">
-        <StaticImage src="../../images/lizryan1.jpeg" alt="A dinosaur" />
+        <StaticImage
+          src="../../images/lizryan1.jpeg"
+          alt="Liz + Ryan Portrait"
+        />
       </div>
       <div id="photoTwo" className="photo-float is-top-right">
-        <StaticImage src="../../images/lizryan4.jpeg" alt="A dinosaur" />
+        <StaticImage
+          src="../../images/lizryan4.jpeg"
+          alt="Liz + Ryan Portrait"
+        />
       </div>
       <div id="photoThree" className="photo-float is-bottom-right">
-        <StaticImage src="../../images/lizryan2.jpeg" alt="A dinosaur" />
+        <StaticImage
+          src="../../images/lizryan2.jpeg"
+          alt="Liz + Ryan Portrait"
+        />
       </div>
     </header>
   );
