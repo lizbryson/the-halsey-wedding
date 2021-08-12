@@ -1,5 +1,4 @@
 import React from "react";
-import { navigate } from "gatsby-link";
 import "./ContactForm.css";
 
 function encode(data) {
@@ -9,11 +8,10 @@ function encode(data) {
 }
 
 const ContactForm = () => {
-  const [state, setState] = React.useState({});
   const [attending, setAttending] = React.useState(false);
   const [shuttle, setShuttle] = React.useState(false);
-  const [seats, setSeats] = React.useState(1);
-
+  const [seats, setSeats] = React.useState(0);
+  const [state, setState] = React.useState({});
   const handleChange = (e) => {
     if (e.target.name === "rsvp") {
       let answerBool = e.target.value === "YES" ? true : false;
@@ -26,20 +24,33 @@ const ContactForm = () => {
     if (e.target.name === "seatsNeeded") {
       setSeats(e.target.value);
     }
-    setState({ ...state, [e.target.name]: e.target.value });
-  };
-
-  const handleSeats = (e) => {
-    const buttonAction = e.target.dataset.action;
-    if (buttonAction === "increase" && seats < 6) {
-      setSeats((prev) => (prev += 1));
-    } else if (buttonAction === "decrease" && seats > 1) {
-      setSeats((prev) => (prev -= 1));
+    if (
+      e.target.dataset.action === "increase" ||
+      e.target.dataset.action === "decrease"
+    ) {
+      if (e.target.dataset.action === "increase" && seats < 6) {
+        setSeats((prev) => {
+          const newVal = prev + 1;
+          setState({ ...state, seats: newVal });
+          return newVal;
+        });
+      }
+      if (e.target.dataset.action === "decrease" && seats > 1) {
+        setSeats((prev) => {
+          let newVal = prev - 1;
+          setState({ ...state, seats: newVal });
+          return newVal;
+        });
+      }
+    } else {
+      setState({ ...state, [e.target.name]: e.target.value });
     }
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -157,7 +168,7 @@ const ContactForm = () => {
                 <input
                   className="numberInput"
                   type="number"
-                  value={seats || 1}
+                  value={seats}
                   step="1"
                   min="1"
                   max="6"
@@ -170,14 +181,14 @@ const ContactForm = () => {
                 <span
                   className="seatControl"
                   data-action="decrease"
-                  onClick={handleSeats}
+                  onClick={handleChange}
                 >
                   -
                 </span>
                 <span
                   className="seatControl"
                   data-action="increase"
-                  onClick={handleSeats}
+                  onClick={handleChange}
                 >
                   +
                 </span>

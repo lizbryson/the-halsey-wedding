@@ -5,20 +5,25 @@ const HotelCard = ({ info }) => {
   return (
     <article className="hotelCard">
       <div className="hotelCard__inner">
-        <a className="hotelCard__image" href={info.url} target="_blank">
+        <a
+          className="hotelCard__image"
+          href={info.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={info.image.src} alt="" />
         </a>
         <div className="hotelCard__meta">
           <div className="hotelCard__top">
             <p className="hotelCard__location">{info.location}</p>
             <h4 className="hotelCard__name">
-              <a target="_blank" href={info.url}>
+              <a target="_blank" rel="noopener noreferrer" href={info.url}>
                 {info.name}
               </a>
             </h4>
             <hr className="hotelCard__divider" />
             <p className="hotelCard__address">
-              <a target="_blank" href={info.map}>
+              <a target="_blank" rel="noopener noreferrer" href={info.map}>
                 {info.address}
               </a>
             </p>

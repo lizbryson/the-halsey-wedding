@@ -14,7 +14,11 @@ const IntroSection = () => {
         <p>IN FRONT OF THE CHAPEL AT</p>
         <h2>The Emerson</h2>
         <p>
-          <a href="https://goo.gl/maps/UCS8DhmxiPhJ4nQz7" target="_blank">
+          <a
+            href="https://goo.gl/maps/UCS8DhmxiPhJ4nQz7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             3950 FM 987, Kaufman, Texas 75142
             <LinkIcon />
           </a>

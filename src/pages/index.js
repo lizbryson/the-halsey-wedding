@@ -41,6 +41,7 @@ const Index = () => {
         <IntroSection />
         <div id="hotels"></div>
         <HotelsSection />
+        <div id="transport"></div>
         <TransportationSection />
         <RsvpSection />
       </Layout>
