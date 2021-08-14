@@ -5,7 +5,17 @@
   text-align: center;
   padding: 4rem 1.5rem;
 }
-
+.disclaimer {
+  margin-top: 3rem;
+  color: #fff;
+}
+.disclaimer a {
+  text-decoration: underline;
+  margin-left: 4px;
+}
+.disclaimer a:hover {
+  opacity: 0.5;
+}
 .rsvpSection h2 {
   font-family: "Canela Web";
   font-weight: 300;

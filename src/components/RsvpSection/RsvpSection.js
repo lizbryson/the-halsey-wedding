@@ -8,6 +8,12 @@ const RsvpSection = () => {
         <h2>RSVP</h2>
         <ContactForm />
       </div>
+      <p className="disclaimer">
+        Having trouble with the submitting the form above?
+        <br />
+        Email your name(s) and RSVP response to:
+        <a href="mailto:liz@lizbryson.co">liz@lizbryson.co</a>.
+      </p>
     </section>
   );
 };
