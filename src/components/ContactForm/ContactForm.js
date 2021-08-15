@@ -164,13 +164,14 @@ const ContactForm = () => {
           <div className={`shuttle-info is-riding--${shuttle}`}>
             <p>
               <label className="rsvpName is-number">
+                Shuttle: {shuttle == "boolean"}
                 <span className="textLabel">Number of Seats:</span>
                 <input
                   className="numberInput"
                   type="number"
                   value={seats}
                   step="1"
-                  min="1"
+                  min="0"
                   max="6"
                   name="seatsNeeded"
                   onChange={handleChange}
