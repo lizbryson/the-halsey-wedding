@@ -116,18 +116,16 @@ form > p:last-child {
 .submitButton {
   background-color: #fff;
   border-radius: 0;
+  cursor: poitner;
   border: none;
-  cursor: pointer;
   text-transform: uppercase;
   font-size: 0.875rem;
   padding: 0.5rem 1.5rem;
   letter-spacing: 2px;
 }
-
 .submitButton:hover {
   opacity: 0.85;
 }
-
 /* RSVP Info
 ***************************************************/
 .rsvp-info {
