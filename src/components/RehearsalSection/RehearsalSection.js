@@ -3,7 +3,7 @@ import RehearsalForm from "../RehearsalForm/RehearsalForm";
 import "./RehearsalSection.css";
 const RehearsalSection = () => {
   return (
-    <section className="rsvpSection">
+    <section className="rsvpSection is-rehearsal">
       <p className="rsvpSection__kicker">Rehearsal Dinner </p>
       <h2>RSVP</h2>
       <p className="rsvpSection__desc">

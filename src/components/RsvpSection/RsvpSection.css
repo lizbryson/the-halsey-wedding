@@ -44,3 +44,7 @@
   max-width: 820px;
   margin: 0 auto;
 }
+
+.resvpSection h2 {
+  margin-top: -2rem;
+}
