@@ -272,3 +272,7 @@ form.is-submitted + .form-thankyou {
   border-radius: 100%;
   text-align: center;
 }
+
+.rsvpSection.is-rehearsal h2 {
+  margin-top: 0;
+}
