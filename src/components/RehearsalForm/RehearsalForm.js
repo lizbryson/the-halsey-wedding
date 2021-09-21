@@ -70,6 +70,7 @@ const RehearsalForm = () => {
       <form
         name="Rehearsal"
         method="post"
+        className="is-rehearsal"
         action="/thanks/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
